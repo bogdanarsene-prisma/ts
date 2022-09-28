@@ -1,18 +1,34 @@
-console.log('hi.');
-
-import {PDFDocument} from 'pdf-lib';
 import * as fs from 'fs';
+import {PDFDocument} from 'pdf-lib';
+const pdfjsLib = require('pdfjs-dist/legacy/build/pdf.js');
 
 async function fillForm() {
+  const formFileUrl =
+    'https://static.anaf.ro/static/10/Anaf/Declaratii_R/AplicatiiDec/D112_XML_2022_0822_270922.pdf';
   const formFile = 'D112_completata.pdf';
   const uint8Array = fs.readFileSync(formFile);
-  const pdfDoc = await PDFDocument.load(uint8Array);
 
-  const form = pdfDoc.getForm();
+  const pdf = await pdfjsLib.getDocument({
+    url: formFileUrl,
+    enableXfa: true,
+  }).promise;
 
-  const asd = form.acroForm;
+  pdf.annotationStorage.setValue('caen', {value: '0111'});
+  //pdf.setValue('caen', {value: '0111'});
 
-  const pdfBytes = await pdfDoc.save();
+  await pdf.saveDocument();
+  await pdf.saveDocument('asd.pdf');
+
+  const data = await pdf.getData();
+  console.log(data);
+
+  const fields = await pdf.getFieldObjects();
+  console.log(fields);
+
+  // json tree of XFA data
+  const xfa = pdf.allXfaHtml;
+
+  console.log(pdf);
 }
 
 fillForm();
