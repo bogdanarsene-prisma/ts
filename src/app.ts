@@ -12,6 +12,11 @@ async function fillForm() {
     url: formFileUrl,
     enableXfa: true,
   }).promise;
+  const data = await pdf.getData();
+  const fields = await pdf.getFieldObjects();
+  const page = await pdf.getPage(1);
+  const content = await page.getTextContent();
+ 
 
   pdf.annotationStorage.setValue('caen', {value: '0111'});
   //pdf.setValue('caen', {value: '0111'});
@@ -19,10 +24,10 @@ async function fillForm() {
   await pdf.saveDocument();
   await pdf.saveDocument('asd.pdf');
 
-  const data = await pdf.getData();
+  const data1 = await pdf.getData();
   console.log(data);
 
-  const fields = await pdf.getFieldObjects();
+  const fields1 = await pdf.getFieldObjects();
   console.log(fields);
 
   // json tree of XFA data
