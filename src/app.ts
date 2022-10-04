@@ -1,18 +1,20 @@
+import fs = require('fs');
+import {parseString} from 'xml2js';
+
 console.log('hi.');
 
-import {PDFDocument} from 'pdf-lib';
-import * as fs from 'fs';
+const xmlFile = './D112_xml_complet.xml';
 
-async function fillForm() {
-  const formFile = 'D112_completata.pdf';
-  const uint8Array = fs.readFileSync(formFile);
-  const pdfDoc = await PDFDocument.load(uint8Array);
+const xmlData: string = fs.readFileSync(xmlFile, 'utf8');
+parseString(xmlData, (error, result) => {
+  result.frmMAIN.sbfrmPage1Ang[0].sfmSectAVal[0].nrcrt[0] = 111;
 
-  const form = pdfDoc.getForm();
+  const xml2js = require('xml2js');
+  const builder = new xml2js.Builder();
+  const xml = builder.buildObject(result);
 
-  const asd = form.acroForm;
+  console.log(result);
+  console.log(error);
+});
 
-  const pdfBytes = await pdfDoc.save();
-}
-
-fillForm();
+console.log('byeeee');
