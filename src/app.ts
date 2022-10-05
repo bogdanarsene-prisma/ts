@@ -25,8 +25,6 @@ if (os.platform() === 'win32') {
   const chilkat = require('@chilkat/ck-node16-macosx');
 }
 
-
-
 function chilkatExample() {
   // Load our PDF file.
   const bd = new chilkat.BinData();
@@ -46,39 +44,112 @@ function chilkatExample() {
   // </something>
 
   const xml = new chilkat.Xml();
-  success = xml.LoadXmlFile('./D112_XML_2022_0822_270922_data.xml');
+  //success = xml.LoadXmlFile('./D112_XML_2022_0822_270922_data.xml');
+  success = xml.LoadXmlFile('./D112_xml_complet.xml');
+
   if (success !== true) {
     console.log('Failed to load XML file.');
     return;
   }
+  // // const jj = parseString(xml, (error, result) => {
+  // //   result.frmMAIN.sbfrmPage1Ang[0].sfmIdentif[0].den[0] = 'mmmmmm';
+  // //   console.log(result);
+  // //   console.log(error);
+  // // });
 
-  // Insert the PDF into the XML.
-  const path = './D112_XML_2022_0822_270922_data.xml';
-  const ssss: string = fs.readFileSync(path, 'utf8');
-
-  parseString(ssss, (error, result) => {
-    // console.log(result.frmMAIN.sbfrmPage1Ang[0].sfmSectAVal[0].nrcrt[0]);
-    // result.frmMAIN.sbfrmPage1Ang[0].sfmSectAVal[0].nrcrt[0] = 111;
-    // console.log(result.frmMAIN.sbfrmPage1Ang[0].sfmSectAVal[0].nrcrt[0]);
+  // // Insert the PDF into the XML.
+  // const path = './D112_XML_2022_0822_270922_data.xml';
+  // const ssss: string = fs.readFileSync(path, 'utf8');
+  // let zzz;
+  // parseString(ssss, (error, result) => {
+  //   // console.log(result.frmMAIN.sbfrmPage1Ang[0].sfmSectAVal[0].nrcrt[0]);
+  //   // result.frmMAIN.sbfrmPage1Ang[0].sfmSectAVal[0].nrcrt[0] = 111;
+  //   // console.log(result.frmMAIN.sbfrmPage1Ang[0].sfmSectAVal[0].nrcrt[0]);
+  //   result.frmMAIN.sbfrmPage1Ang[0].sfmIdentif[0].den[0] = 'mmmmmm';
+  //   const xml2js = require('xml2js');
+  //   const builder = new xml2js.Builder();
+  //   zzz = builder.buildObject(result);
+  //   console.log(result);
+  //   console.log(error);
+  // });
+  let zzz;
+  let mmm = xml.GetXml();
+  parseString(mmm, (error, result) => {
+    console.log(
+      'sdsdsds is',
+      result.frmMAIN.sbfrmPage1Ang[0].sfmIdentif[0].den[0]
+    );
+    //result.frmMAIN.sbfrmPage1Ang[0].sfmSectAVal[0].nrcrt[0] = 111;
     result.frmMAIN.sbfrmPage1Ang[0].sfmIdentif[0].den[0] = 'mmmmmm';
+    console.log(result.frmMAIN.sbfrmPage1Ang[0].sfmIdentif[0].den[0]);
     const xml2js = require('xml2js');
     const builder = new xml2js.Builder();
-    const xyz = builder.buildObject(result);
+    zzz = builder.buildObject(result);
     console.log(result);
     console.log(error);
   });
-  xml.NewChild2('xyz|pdfData', bd.GetEncoded('base64'));
+  //let status = xml.SaveXml(zzz);
+  //xml.NewChild2('xyz|pdfData', bd.GetEncoded('base64'));
+  xml.NewChild2('frmMAIN', bd.GetEncoded('base64'));
 
   // Show the new XML:
   console.log(xml.GetXml());
 
   // To extract the PDF data out and restore the PDF file:
   const bd2 = new chilkat.BinData();
-  success = bd2.AppendEncoded(xml.GetChildContent('xyz|pdfData'), 'base64');
+  success = bd2.AppendEncoded(xml.GetChildContent('frmMAIN'), 'base64');
   success = bd2.WriteFile('./helloWorld.pdf');
+
+  // const bd3 = new chilkat.BinData();
+  // success = bd3.AppendEncoded(xml.GetChildContent(zzz), 'base64');
+  // success = bd3.WriteFile('./helloWorld2.pdf');
 
   console.log('Success.');
 }
 
-chilkatExample();
+function chilkatExample2() {
+  const xSoapEnvelope = new chilkat.Xml();
+  const success = xSoapEnvelope.LoadXmlFile('./D112_xml_complet.xml');
+  if (success !== true) {
+    console.log(xSoapEnvelope.LastErrorText);
+    return;
+  }
+
+  // The root node is the SOAP envelope, and in this particular case has a Tag of "soapenv:Envelope"
+  console.log('SOAP envelope tag: ' + xSoapEnvelope.Tag);
+
+  // The SOAP body (in this case) is a direct child of the SOAP envelope
+  // and has the tag "soapenv:Body"
+  // xSoapBody: Xml
+  const xSoapBody = xSoapEnvelope.FindChild('sbfrmPage1Ang');
+  if (xSoapEnvelope.LastMethodSuccess === false) {
+    console.log('No direct child having the tag "soapenv:Body" was found.');
+    return;
+  }
+
+  // The SOAP message body is the direct child of the SOAP envelope body:
+  // xMessageBody: Xml
+  const xMessageBody = xSoapBody.FindChild('sfmIdentif');
+  if (xSoapBody.LastMethodSuccess === false) {
+    console.log(
+      'No direct child having the tag "TimbreFiscalDigital" was found.'
+    );
+
+    return;
+  }
+  let bla = xMessageBody.FindChild('an_r');
+  if (xSoapBody.LastMethodSuccess === false) {
+    console.log('No direct child having the tag "an" was found.');
+
+    return;
+  }
+  bla.Content = '2025';
+
+  // If desired, get the XML of just the SOAP message body:
+  const soapMessageXml = xSoapBody.GetXml();
+}
+
+chilkatExample2();
+
+//chilkatExample();
 console.log('byeeee');
