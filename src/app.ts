@@ -1,5 +1,5 @@
 import fs = require('fs');
-//import {parseString} from 'xml2js';
+import {parseString} from 'xml2js';
 import os = require('os');
 const chilkat = require('@chilkat/ck-node16-linux64');
 
@@ -24,6 +24,8 @@ if (os.platform() === 'win32') {
 } else if (os.platform() === 'darwin') {
   const chilkat = require('@chilkat/ck-node16-macosx');
 }
+
+
 
 function chilkatExample() {
   // Load our PDF file.
@@ -51,6 +53,20 @@ function chilkatExample() {
   }
 
   // Insert the PDF into the XML.
+  const path = './D112_XML_2022_0822_270922_data.xml';
+  const ssss: string = fs.readFileSync(path, 'utf8');
+
+  parseString(ssss, (error, result) => {
+    // console.log(result.frmMAIN.sbfrmPage1Ang[0].sfmSectAVal[0].nrcrt[0]);
+    // result.frmMAIN.sbfrmPage1Ang[0].sfmSectAVal[0].nrcrt[0] = 111;
+    // console.log(result.frmMAIN.sbfrmPage1Ang[0].sfmSectAVal[0].nrcrt[0]);
+    result.frmMAIN.sbfrmPage1Ang[0].sfmIdentif[0].den[0] = 'mmmmmm';
+    const xml2js = require('xml2js');
+    const builder = new xml2js.Builder();
+    const xyz = builder.buildObject(result);
+    console.log(result);
+    console.log(error);
+  });
   xml.NewChild2('xyz|pdfData', bd.GetEncoded('base64'));
 
   // Show the new XML:
