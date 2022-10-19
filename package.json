@@ -30,6 +30,7 @@
     "@chilkat/ck-node14-linux64": "^9.50.91",
     "@chilkat/ck-node15-linux64": "^9.50.91",
     "@chilkat/ck-node16-linux64": "^9.50.91",
+    "@chilkat/ck-node18-linux64": "^9.50.92",
     "nodemon": "^2.0.20",
     "pdf-lib": "^1.17.1",
     "pdfkit": "^0.13.0",

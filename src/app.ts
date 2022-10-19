@@ -1,29 +1,29 @@
 import fs = require('fs');
 import {parseString} from 'xml2js';
 import os = require('os');
-const chilkat = require('@chilkat/ck-node16-linux64');
+const chilkat = require('@chilkat/ck-node18-linux64');
 
 console.log('hi.');
 
 //const xmlFile = './D112_xml_complet.xml';
 //const os = require('os');
-if (os.platform() === 'win32') {
-  if (os.arch() === 'ia32') {
-    const chilkat = require('@chilkat/ck-node16-win-ia32');
-  } else {
-    const chilkat = require('@chilkat/ck-node16-win64');
-  }
-} else if (os.platform() === 'linux') {
-  if (os.arch() === 'arm') {
-    const chilkat = require('@chilkat/ck-node16-arm');
-  } else if (os.arch() === 'x86') {
-    const chilkat = require('@chilkat/ck-node16-linux32');
-  } else {
-    const chilkat = require('@chilkat/ck-node16-linux64');
-  }
-} else if (os.platform() === 'darwin') {
-  const chilkat = require('@chilkat/ck-node16-macosx');
-}
+// if (os.platform() === 'win32') {
+//   if (os.arch() === 'ia32') {
+//     const chilkat = require('@chilkat/ck-node16-win-ia32');
+//   } else {
+//     const chilkat = require('@chilkat/ck-node16-win64');
+//   }
+// } else if (os.platform() === 'linux') {
+//   if (os.arch() === 'arm') {
+//     const chilkat = require('@chilkat/ck-node16-arm');
+//   } else if (os.arch() === 'x86') {
+//     const chilkat = require('@chilkat/ck-node16-linux32');
+//   } else {
+//     const chilkat = require('@chilkat/ck-node16-linux64');
+//   }
+// } else if (os.platform() === 'darwin') {
+//   const chilkat = require('@chilkat/ck-node16-macosx');
+// }
 
 function chilkatExample() {
   // Load our PDF file.
@@ -73,7 +73,7 @@ function chilkatExample() {
   //   console.log(error);
   // });
   let zzz;
-  let mmm = xml.GetXml();
+  const mmm = xml.GetXml();
   parseString(mmm, (error, result) => {
     console.log(
       'sdsdsds is',
@@ -100,29 +100,47 @@ function chilkatExample() {
   success = bd2.AppendEncoded(xml.GetChildContent('frmMAIN'), 'base64');
   success = bd2.WriteFile('./helloWorld.pdf');
 
-  // const bd3 = new chilkat.BinData();
-  // success = bd3.AppendEncoded(xml.GetChildContent(zzz), 'base64');
-  // success = bd3.WriteFile('./helloWorld2.pdf');
-
   console.log('Success.');
 }
 
 function chilkatExample2() {
-  const xSoapEnvelope = new chilkat.Xml();
-  const success = xSoapEnvelope.LoadXmlFile('./D112_xml_complet.xml');
+  const bd = new chilkat.BinData();
+  let success = bd.LoadFile('./D112_XML_2022_0822_300922.pdf');
   if (success !== true) {
-    console.log(xSoapEnvelope.LastErrorText);
+    console.log('Failed to load PDF file.');
+    return;
+  }
+
+  const pdfToXml = new chilkat.pdfToXml();
+
+  // Indicate the charset of the output XML we'll want.
+  //pdfToXml.XmlCharset = 'utf-8';
+
+  const aaasss = pdfToXml.ConvertFile(
+    './D112_XML_2022_0822_300922.pdf',
+    'out.xml'
+  );
+  if (aaasss !== true) {
+    console.log(pdfToXml.LastErrorText);
+  } else {
+    console.log('Success');
+  }
+
+  const xml2 = new chilkat.Xml();
+  success = xml2.LoadXmlFile('./D112_xml_complet.xml');
+  if (success !== true) {
+    console.log(xml2.LastErrorText);
     return;
   }
 
   // The root node is the SOAP envelope, and in this particular case has a Tag of "soapenv:Envelope"
-  console.log('SOAP envelope tag: ' + xSoapEnvelope.Tag);
+  console.log('SOAP envelope tag: ' + xml2.Tag);
 
   // The SOAP body (in this case) is a direct child of the SOAP envelope
   // and has the tag "soapenv:Body"
   // xSoapBody: Xml
-  const xSoapBody = xSoapEnvelope.FindChild('sbfrmPage1Ang');
-  if (xSoapEnvelope.LastMethodSuccess === false) {
+  const xSoapBody = xml2.FindChild('sbfrmPage1Ang');
+  if (xml2.LastMethodSuccess === false) {
     console.log('No direct child having the tag "soapenv:Body" was found.');
     return;
   }
@@ -137,7 +155,7 @@ function chilkatExample2() {
 
     return;
   }
-  let bla = xMessageBody.FindChild('an_r');
+  const bla = xMessageBody.FindChild('an_r');
   if (xSoapBody.LastMethodSuccess === false) {
     console.log('No direct child having the tag "an" was found.');
 
@@ -147,6 +165,12 @@ function chilkatExample2() {
 
   // If desired, get the XML of just the SOAP message body:
   const soapMessageXml = xSoapBody.GetXml();
+  console.log(xml2.GetXml());
+  xml2.NewChild2('frmMAIN', bd.GetEncoded('base64'));
+  // To extract the PDF data out and restore the PDF file:
+  const bd2 = new chilkat.BinData();
+  success = bd2.AppendEncoded(xml2.GetChildContent('frmMAIN'), 'base64');
+  success = bd2.WriteFile('./helloWorld.pdf');
 }
 
 chilkatExample2();
