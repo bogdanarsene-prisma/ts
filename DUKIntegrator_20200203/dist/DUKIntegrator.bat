@@ -1,0 +1,1 @@
+%~dp0\jre6\bin\java.exe -jar %~dp0\DUKIntegrator.jar

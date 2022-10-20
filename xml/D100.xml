@@ -1,0 +1,4 @@
+<?xml version="1.0"?>
+<declaratie100  luna="09" an="2022" d_anulare="0" d_succ="0" d_dizolv="0" nume_declar="hfh" prenume_declar="hfh" functie_declar="hfgh" cui="38020609" den="BLABLA" adresa="BUCURESTI sect. 1 str. dadas nr. 1" totalPlata_A="0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="mfp:anaf:dgti:d100:declaratie:v2 D100.xsd" xmlns="mfp:anaf:dgti:d100:declaratie:v2">
+	<obligatie  cod_oblig="121" cod_bugetar="5503XXXXXX" scadenta="25.10.2022" nr_evid="10121010922251022000031" suma_dat="0" suma_ded="0" suma_plata="0" suma_rest="0" suma_redu="0" suma_spons="0" suma_AMEF="0" cota="1" />
+</declaratie100>

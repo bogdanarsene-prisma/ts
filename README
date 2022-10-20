@@ -1,0 +1,19 @@
+DUKIntegrator needs to be run using jre6
+
+Included jre6 for windows and openjdk-8-jre for linux systems that don't already have java installed
+
+Parametrii pt DUKIntegrator
+	- caleConfig trebuie indicata numai in situatia (putin probabila) in care programul nu poate detecta singur calea folderului "config" si se doreste semnarea fisierului PDF rezultat (optiunea -s) folosind smartCarduri
+	- tipDeclaratie indica numele declaratiei cuprinse in fisierul XML de validat (ex: "D112")
+	- fisierXML este chiar declaratia de prelucrat
+	- fisierRezultat va contine erorile si atentionarile obtinute in urma validarii (optiunea -v) sau "ok" daca nu exista erori/atentionari de validare (optiunea -v) sau nu exista erori de validare si crearea PDF/semnarea a decurs corect (optiunile -p/-s); daca nu exista erori la validare dar exista erori la creare/semnare PDF, fisierul de erori va contine aceste ultime erori. Prin lipsa "<fisierXML>.err.txt".
+	- optiuneValidare indica validatoarelor unor declaratii (de exemplu D112) o optiune de validare. Prin lipsa 0. In cazul D112 optiunile pot fi:
+		- 0 - angajatori uzuali, care depun D112 la ANAF
+		- 1 - angajatori unitati speciale care depun D112 la ANAF
+		- 2 - angajatori unitati speciale care nu depun D112 la ANAF
+	- fiserZIP - numele fiserului ZIP de atasat prin optiunile -p/-s. Prin lipsa "<fisierXML fara extensia .xml>.zip".
+IMPORTANT: la declaratiile fara ZIP atasat acest parametru trebuie sa fie 0.
+	- fiserPDF - numele fiserului PDF creat prin optiunile -p/-s. Prin lipsa "<fisierXML fara extensia .xml>.pdf".
+	- pinSmartCard - pinul folosit la semnarea cu smartCard
+	- smartCard - tipul smartCard-ului folosit la semnarea digitala a fisierului PDF (ex: "aladdin"). Trebuie sa existe un fisier <caleConfig>/<smartCard>.cfg care contine informatii de configurare a smartCardului
+	- selectorCertificat - este numarul de ordine pe smartCard (incepand cu 0) al certificatului cu care se doreste semnarea, in cazul unui smartCard care contine mai multe certificate digitale. Prin lipsa 0 (primul certificat de pe smartCard).
