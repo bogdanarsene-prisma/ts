@@ -20,14 +20,8 @@ export function itemsAreEqual(
     if (!obj2.hasOwnProperty(key)) {
       return false;
     }
-    if (isObject(value)) {
-      if (!itemsAreEqual(value, obj2[key])) {
-        return false;
-      }
-    } else {
-      if (value !== obj2[key]) {
-        return false;
-      }
+    if (!itemsAreEqual(value, obj2[key])) {
+      return false;
     }
   }
   for (const [key, value] of Object.entries(obj2)) {
