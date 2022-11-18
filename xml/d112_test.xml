@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<declaratieUnica an_r="2022" d_rec="" functie_declar="" luna_r="9" nume_declar="" prenume_declar="" tip_rec="" xmlns="mfp:anaf:dgti:declaratie_unica:declaratie:v6">
+  <angajator adrFisc="" adrSoc="" bifa_AgCon="" bifa_CAM="" caen="6020" caenC="" casaAng="" cif="" cifAf1="" cifAf1_a="" cifAf2="" cifAf2_a="" cifS="" datCAM="" den="" faxFisc="" faxSoc="" mailFisc="" mailSoc="" pond1="" pond1_a="" rgCom="" telFisc="" telSoc="" totalPlata_A="">
+    <angajatorA A_codBugetar="" A_codOblig="" A_datorat="" A_deductibil="" A_plata="" A_scutit=""/>
+    <angajatorB B_brutSalarii="" B_cnp="" B_pensie="" B_sal="" B_sanatate=""/>
+    <angajatorC1 C1_11="" C1_12="" C1_13="" C1_21="" C1_22="" C1_23="" C1_31="" C1_32="" C1_33="" C1_5="" C1_7="" C1_T="" C1_T1="" C1_T2="" C1_T3=""/>
+    <angajatorC2 C2_10="" C2_11="" C2_111="" C2_112="" C2_113="" C2_114="" C2_115="" C2_116="" C2_12="" C2_13="" C2_14="" C2_140="" C2_15="" C2_16="" C2_21="" C2_211="" C2_212="" C2_213="" C2_214="" C2_215="" C2_216="" C2_22="" C2_23="" C2_24="" C2_25="" C2_26="" C2_31="" C2_32="" C2_34="" C2_36="" C2_41="" C2_41a="" C2_42="" C2_42a="" C2_44="" C2_44a="" C2_46="" C2_46a="" C2_51="" C2_52="" C2_54="" C2_56="" C2_T6=""/>
+    <angajatorC3 C3_11="" C3_12="" C3_13="" C3_14="" C3_21="" C3_22="" C3_23="" C3_24="" C3_31="" C3_32="" C3_33="" C3_34="" C3_41="" C3_42="" C3_43="" C3_44="" C3_suma="" C3_total=""/>
+    <angajatorC4 C4_baza="" C4_ct=""/>
+    <angajatorC5 C5_baza="" C5_ct=""/>
+    <angajatorD D2="" D3=""/>
+    <angajatorE1 E1_baza="" E1_venit=""/>
+    <angajatorE2 E2_10="" E2_11="" E2_111="" E2_112="" E2_114="" E2_116="" E2_12="" E2_14="" E2_140="" E2_16="" E2_21="" E2_211="" E2_212="" E2_214="" E2_216="" E2_22="" E2_24="" E2_26="" E2_31="" E2_32="" E2_34="" E2_36="" E2_41="" E2_41a="" E2_42="" E2_42a="" E2_44="" E2_44a="" E2_46="" E2_46a="" E2_51="" E2_52="" E2_54="" E2_56="" E2_66=""/>
+    <angajatorE3 E3_11="" E3_12="" E3_13="" E3_14="" E3_21="" E3_22="" E3_23="" E3_24="" E3_31="" E3_32="" E3_33="" E3_34="" E3_41="" E3_42="" E3_43="" E3_44="" E3_suma="" E3_total=""/>
+    <angajatorE4 E4_aj_nr="" E4_aj_suma=""/>
+    <angajatorG cnp_b="" cnp_d="" cuantum_d="" data_d="" den_b="" den_d="" nr_act_d=""/>
+  </angajator>
+  <asigurat Tcota_E4="" Timp_E3="" Tsuma_E4="" asigCI="" asigExc="" asigSO="" asigScu="" bifa_pilon2="" bifa_plataNerezident="" casaSn="" cisAsig="" cnpAnt="" cnpAsig="" dataAng="" dataSf="" idAsig="" motivExc="" numeAnt="" numeAsig="" plata_CAM="" plata_CAS="" plata_CASS="" prenAnt="" prenAsig="">
+    <asiguratE4 cnp_ctr="" cota="" cota_ctr="" cui="" data_ctr="" den="" nr_ctr="" suma="" suma_ctr=""/>
+    <coAsigurati cnp="" nume="" prenume="" tip=""/>
+    <det1 acord_stat="" bifa_stat="" cif_detasat="" dataD1="" dataD2="" detasat="" stat_detasat=""/>
+  </asigurat>
+</declaratieUnica>

@@ -1,6 +1,0 @@
-E: validari globale
- eroare atribut: luna_r: numar intreg eronat: 'IntInt1_12SType'
-E: validari globale
- eroare atribut: an_r: numar intreg eronat: 'IntInt2011_2100SType'
-F: validari globale
- eroare structura: namespace ('') lipsa sau incorect la sectiunea declaratieUnica. Valoarea corecta este xmlns='mfp:anaf:dgti:declaratie_unica:declaratie:v6'

@@ -7,6 +7,8 @@ const {exec} = require('node:child_process');
 import fetch from 'cross-fetch';
 const download = require('download');
 import {parseString} from 'xml2js';
+const {create} = require('xmlbuilder2');
+import xml2js = require('xml2js');
 
 console.log('hi.');
 
@@ -328,15 +330,25 @@ async function d112() {
   parseString(xmlData, (error, result) => {
     if (error === null) {
       result.declaratieUnica.$.luna_r = 9;
+      result.declaratieUnica.$.an_r = 2022;
+      // const xml2js = require('xml2js');
+      // const builder = new xml2js.Builder();
+      // const zzz = builder.buildObject(result);
+      const builder = new xml2js.Builder();
+      const xml = builder.buildObject(result);
+
+      fs.writeFileSync('./xml/D112.xml', xml, (err: any, data: any) => {
+        if (err) console.log(err);
+
+        console.log('successfully written our update xml to file');
+      });
     }
   });
-
   console.log(decl);
 }
 
 //d112();
+validate('./xml/d112_04102022.xml', Form.D112, true, 0);
 
-//formFiles('./DUKIntegrator_20200203', 'remove');
+formFiles('./DUKIntegrator_20200203', 'remove');
 //formFiles('./DUKIntegrator_20200203', 'download');
-
-//validate('./xml/D100.xml', Form.D100, true, 0);

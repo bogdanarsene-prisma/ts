@@ -56,14 +56,14 @@
 				<xs:attribute name="mailFisc" type="Str200"/>
 				<xs:attribute name="casaAng" type="Str_casaAngListSType" use="required"/>
 				<xs:attribute name="datCAM" type="IntInt0_1SType" use="required"/>
-				<xs:attribute name="cifAf1" type="IntPoz15SType"/>
-				<xs:attribute name="cifAf2" type="IntPoz15SType"/>
+				<xs:attribute name="cifAf1" type=""/>
+				<xs:attribute name="cifAf2" type=""/>
 				<xs:attribute name="pond1" type="DblPoz6_2SType"/>
 				<xs:attribute name="bifa_CAM" type="IntInt0_1SType" use="required"/>
-				<xs:attribute name="totalPlata_A" type="IntPoz15SType" use="required"/>
+				<xs:attribute name="totalPlata_A" type="" use="required"/>
 				<xs:attribute name="caenC" type="Str_caenListConstrType"/>
-				<xs:attribute name="cifAf1_a" type="IntPoz15SType"/>
-				<xs:attribute name="cifAf2_a" type="IntPoz15SType"/>
+				<xs:attribute name="cifAf1_a" type=""/>
+				<xs:attribute name="cifAf2_a" type=""/>
 				<xs:attribute name="pond1_a" type="DblPoz6_2SType"/>
 				<xs:attribute name="bifa_AgCon" type="IntInt1_1SType"/>
 			</xs:restriction>
@@ -74,10 +74,10 @@
 			<xs:restriction base="xs:anyType">
 				<xs:attribute name="A_codBugetar" type="Str_A_codBugetarListSType" use="required"/>
 				<xs:attribute name="A_codOblig" type="Str_A_cod_obligListSType" use="required"/>
-				<xs:attribute name="A_datorat" type="IntPoz15SType" use="required"/>
-				<xs:attribute name="A_deductibil" type="IntPoz15SType"/>
-				<xs:attribute name="A_scutit" type="IntPoz15SType" use="required"/>
-				<xs:attribute name="A_plata" type="IntPoz15SType" use="required"/>
+				<xs:attribute name="A_datorat" type="" use="required"/>
+				<xs:attribute name="A_deductibil" type=""/>
+				<xs:attribute name="A_scutit" type="" use="required"/>
+				<xs:attribute name="A_plata" type="" use="required"/>
 			</xs:restriction>
 		</xs:complexContent>
 	</xs:complexType>
@@ -87,7 +87,7 @@
 				<xs:attribute name="B_cnp" type="IntPoz6SType" use="required"/>
 				<xs:attribute name="B_sanatate" type="IntPoz6SType" use="required"/>
 				<xs:attribute name="B_pensie" type="IntPoz5SType" use="required"/>
-				<xs:attribute name="B_brutSalarii" type="IntPoz15SType" use="required"/>
+				<xs:attribute name="B_brutSalarii" type="" use="required"/>
 				<xs:attribute name="B_sal" type="IntPoz5SType" use="required"/>
 			</xs:restriction>
 		</xs:complexContent>
@@ -95,21 +95,21 @@
 	<xs:complexType name="AngajatorC1Type">
 		<xs:complexContent>
 			<xs:restriction base="xs:anyType">
-				<xs:attribute name="C1_11" type="IntPoz15SType"/>
-				<xs:attribute name="C1_12" type="IntPoz15SType"/>
-				<xs:attribute name="C1_13" type="IntPoz15SType"/>
-				<xs:attribute name="C1_21" type="IntPoz15SType"/>
-				<xs:attribute name="C1_22" type="IntPoz15SType"/>
-				<xs:attribute name="C1_23" type="IntPoz15SType"/>
-				<xs:attribute name="C1_31" type="IntPoz15SType"/>
-				<xs:attribute name="C1_32" type="IntPoz15SType"/>
-				<xs:attribute name="C1_33" type="IntPoz15SType"/>
-				<xs:attribute name="C1_T1" type="IntPoz15SType"/>
-				<xs:attribute name="C1_T2" type="IntPoz15SType"/>
-				<xs:attribute name="C1_T" type="IntPoz15SType"/>
-				<xs:attribute name="C1_T3" type="IntPoz15SType"/>
-				<xs:attribute name="C1_5" type="IntPoz15SType"/>
-				<xs:attribute name="C1_7" type="IntPoz15SType"/>
+				<xs:attribute name="C1_11" type=""/>
+				<xs:attribute name="C1_12" type=""/>
+				<xs:attribute name="C1_13" type=""/>
+				<xs:attribute name="C1_21" type=""/>
+				<xs:attribute name="C1_22" type=""/>
+				<xs:attribute name="C1_23" type=""/>
+				<xs:attribute name="C1_31" type=""/>
+				<xs:attribute name="C1_32" type=""/>
+				<xs:attribute name="C1_33" type=""/>
+				<xs:attribute name="C1_T1" type=""/>
+				<xs:attribute name="C1_T2" type=""/>
+				<xs:attribute name="C1_T" type=""/>
+				<xs:attribute name="C1_T3" type=""/>
+				<xs:attribute name="C1_5" type=""/>
+				<xs:attribute name="C1_7" type=""/>
 			</xs:restriction>
 		</xs:complexContent>
 	</xs:complexType>
@@ -120,45 +120,45 @@
 				<xs:attribute name="C2_12" type="IntPoz5SType"/>
 				<xs:attribute name="C2_13" type="IntPoz5SType"/>
 				<xs:attribute name="C2_14" type="IntPoz5SType"/>
-				<xs:attribute name="C2_15" type="IntPoz15SType"/>
-				<xs:attribute name="C2_16" type="IntPoz15SType"/>
+				<xs:attribute name="C2_15" type=""/>
+				<xs:attribute name="C2_16" type=""/>
 				<xs:attribute name="C2_21" type="IntPoz6SType"/>
 				<xs:attribute name="C2_22" type="IntPoz5SType"/>
 				<xs:attribute name="C2_24" type="IntPoz5SType"/>
-				<xs:attribute name="C2_26" type="IntPoz15SType"/>
+				<xs:attribute name="C2_26" type=""/>
 				<xs:attribute name="C2_31" type="IntPoz6SType"/>
 				<xs:attribute name="C2_32" type="IntPoz5SType"/>
 				<xs:attribute name="C2_34" type="IntPoz5SType"/>
-				<xs:attribute name="C2_36" type="IntPoz15SType"/>
+				<xs:attribute name="C2_36" type=""/>
 				<xs:attribute name="C2_41" type="IntPoz6SType"/>
 				<xs:attribute name="C2_42" type="IntPoz5SType"/>
 				<xs:attribute name="C2_44" type="IntPoz5SType"/>
-				<xs:attribute name="C2_46" type="IntPoz15SType"/>
+				<xs:attribute name="C2_46" type=""/>
 				<xs:attribute name="C2_51" type="IntPoz6SType"/>
 				<xs:attribute name="C2_52" type="IntPoz5SType"/>
 				<xs:attribute name="C2_54" type="IntPoz5SType"/>
-				<xs:attribute name="C2_56" type="IntPoz15SType"/>
-				<xs:attribute name="C2_T6" type="IntPoz15SType"/>
-				<xs:attribute name="C2_10" type="IntPoz15SType"/>
-				<xs:attribute name="C2_140" type="IntPoz15SType"/>
+				<xs:attribute name="C2_56" type=""/>
+				<xs:attribute name="C2_T6" type=""/>
+				<xs:attribute name="C2_10" type=""/>
+				<xs:attribute name="C2_140" type=""/>
 				<xs:attribute name="C2_111" type="IntPoz6SType"/>
 				<xs:attribute name="C2_112" type="IntPoz5SType"/>
 				<xs:attribute name="C2_113" type="IntPoz5SType"/>
 				<xs:attribute name="C2_114" type="IntPoz5SType"/>
-				<xs:attribute name="C2_115" type="IntPoz15SType"/>
-				<xs:attribute name="C2_116" type="IntPoz15SType"/>
+				<xs:attribute name="C2_115" type=""/>
+				<xs:attribute name="C2_116" type=""/>
 				<xs:attribute name="C2_23" type="IntPoz5SType"/>
-				<xs:attribute name="C2_25" type="IntPoz15SType"/>
+				<xs:attribute name="C2_25" type=""/>
 				<xs:attribute name="C2_211" type="IntPoz6SType"/>
 				<xs:attribute name="C2_212" type="IntPoz5SType"/>
 				<xs:attribute name="C2_213" type="IntPoz5SType"/>
 				<xs:attribute name="C2_214" type="IntPoz5SType"/>
-				<xs:attribute name="C2_215" type="IntPoz15SType"/>
-				<xs:attribute name="C2_216" type="IntPoz15SType"/>
+				<xs:attribute name="C2_215" type=""/>
+				<xs:attribute name="C2_216" type=""/>
 				<xs:attribute name="C2_41a" type="IntPoz6SType"/>
 				<xs:attribute name="C2_42a" type="IntPoz5SType"/>
 				<xs:attribute name="C2_44a" type="IntPoz5SType"/>
-				<xs:attribute name="C2_46a" type="IntPoz15SType"/>
+				<xs:attribute name="C2_46a" type=""/>
 			</xs:restriction>
 		</xs:complexContent>
 	</xs:complexType>
@@ -167,38 +167,38 @@
 			<xs:restriction base="xs:anyType">
 				<xs:attribute name="C3_11" type="IntPoz6SType"/>
 				<xs:attribute name="C3_12" type="IntPoz5SType"/>
-				<xs:attribute name="C3_13" type="IntPoz15SType"/>
-				<xs:attribute name="C3_14" type="IntPoz15SType"/>
+				<xs:attribute name="C3_13" type=""/>
+				<xs:attribute name="C3_14" type=""/>
 				<xs:attribute name="C3_21" type="IntPoz6SType"/>
 				<xs:attribute name="C3_22" type="IntPoz5SType"/>
-				<xs:attribute name="C3_23" type="IntPoz15SType"/>
-				<xs:attribute name="C3_24" type="IntPoz15SType"/>
+				<xs:attribute name="C3_23" type=""/>
+				<xs:attribute name="C3_24" type=""/>
 				<xs:attribute name="C3_31" type="IntPoz6SType"/>
 				<xs:attribute name="C3_32" type="IntPoz5SType"/>
-				<xs:attribute name="C3_33" type="IntPoz15SType"/>
-				<xs:attribute name="C3_34" type="IntPoz15SType"/>
+				<xs:attribute name="C3_33" type=""/>
+				<xs:attribute name="C3_34" type=""/>
 				<xs:attribute name="C3_41" type="IntPoz6SType"/>
 				<xs:attribute name="C3_42" type="IntPoz5SType"/>
-				<xs:attribute name="C3_43" type="IntPoz15SType"/>
-				<xs:attribute name="C3_44" type="IntPoz15SType"/>
-				<xs:attribute name="C3_total" type="IntPoz15SType"/>
-				<xs:attribute name="C3_suma" type="IntPoz15SType"/>
+				<xs:attribute name="C3_43" type=""/>
+				<xs:attribute name="C3_44" type=""/>
+				<xs:attribute name="C3_total" type=""/>
+				<xs:attribute name="C3_suma" type=""/>
 			</xs:restriction>
 		</xs:complexContent>
 	</xs:complexType>
 	<xs:complexType name="AngajatorC4Type">
 		<xs:complexContent>
 			<xs:restriction base="xs:anyType">
-				<xs:attribute name="C4_baza" type="IntPoz15SType" use="required"/>
-				<xs:attribute name="C4_ct" type="IntPoz15SType" use="required"/>
+				<xs:attribute name="C4_baza" type="" use="required"/>
+				<xs:attribute name="C4_ct" type="" use="required"/>
 			</xs:restriction>
 		</xs:complexContent>
 	</xs:complexType>
 	<xs:complexType name="AngajatorC5Type">
 		<xs:complexContent>
 			<xs:restriction base="xs:anyType">
-				<xs:attribute name="C5_baza" type="IntPoz15SType" use="required"/>
-				<xs:attribute name="C5_ct" type="IntPoz15SType" use="required"/>
+				<xs:attribute name="C5_baza" type="" use="required"/>
+				<xs:attribute name="C5_ct" type="" use="required"/>
 			</xs:restriction>
 		</xs:complexContent>
 	</xs:complexType>
@@ -213,8 +213,8 @@
 	<xs:complexType name="AngajatorE1Type">
 		<xs:complexContent>
 			<xs:restriction base="xs:anyType">
-				<xs:attribute name="E1_venit" type="IntPoz15SType"/>
-				<xs:attribute name="E1_baza" type="IntPoz15SType"/>
+				<xs:attribute name="E1_venit" type=""/>
+				<xs:attribute name="E1_baza" type=""/>
 			</xs:restriction>
 		</xs:complexContent>
 	</xs:complexType>
@@ -224,38 +224,38 @@
 				<xs:attribute name="E2_11" type="IntPoz6SType"/>
 				<xs:attribute name="E2_12" type="IntPoz5SType"/>
 				<xs:attribute name="E2_14" type="IntPoz5SType"/>
-				<xs:attribute name="E2_16" type="IntPoz15SType"/>
+				<xs:attribute name="E2_16" type=""/>
 				<xs:attribute name="E2_21" type="IntPoz6SType"/>
 				<xs:attribute name="E2_22" type="IntPoz5SType"/>
 				<xs:attribute name="E2_24" type="IntPoz5SType"/>
-				<xs:attribute name="E2_26" type="IntPoz15SType"/>
+				<xs:attribute name="E2_26" type=""/>
 				<xs:attribute name="E2_31" type="IntPoz6SType"/>
 				<xs:attribute name="E2_32" type="IntPoz5SType"/>
 				<xs:attribute name="E2_34" type="IntPoz5SType"/>
-				<xs:attribute name="E2_36" type="IntPoz15SType"/>
+				<xs:attribute name="E2_36" type=""/>
 				<xs:attribute name="E2_41" type="IntPoz6SType"/>
 				<xs:attribute name="E2_42" type="IntPoz5SType"/>
 				<xs:attribute name="E2_44" type="IntPoz5SType"/>
-				<xs:attribute name="E2_46" type="IntPoz15SType"/>
+				<xs:attribute name="E2_46" type=""/>
 				<xs:attribute name="E2_51" type="IntPoz6SType"/>
 				<xs:attribute name="E2_52" type="IntPoz5SType"/>
 				<xs:attribute name="E2_54" type="IntPoz5SType"/>
-				<xs:attribute name="E2_56" type="IntPoz15SType"/>
-				<xs:attribute name="E2_66" type="IntPoz15SType"/>
-				<xs:attribute name="E2_10" type="IntPoz15SType"/>
-				<xs:attribute name="E2_140" type="IntPoz15SType"/>
+				<xs:attribute name="E2_56" type=""/>
+				<xs:attribute name="E2_66" type=""/>
+				<xs:attribute name="E2_10" type=""/>
+				<xs:attribute name="E2_140" type=""/>
 				<xs:attribute name="E2_111" type="IntPoz6SType"/>
 				<xs:attribute name="E2_112" type="IntPoz5SType"/>				
 				<xs:attribute name="E2_114" type="IntPoz5SType"/>				
-				<xs:attribute name="E2_116" type="IntPoz15SType"/>
+				<xs:attribute name="E2_116" type=""/>
 				<xs:attribute name="E2_211" type="IntPoz6SType"/>
 				<xs:attribute name="E2_212" type="IntPoz5SType"/>				
 				<xs:attribute name="E2_214" type="IntPoz5SType"/>
-				<xs:attribute name="E2_216" type="IntPoz15SType"/>
+				<xs:attribute name="E2_216" type=""/>
 				<xs:attribute name="E2_41a" type="IntPoz6SType"/>
 				<xs:attribute name="E2_42a" type="IntPoz5SType"/>
 				<xs:attribute name="E2_44a" type="IntPoz5SType"/>
-				<xs:attribute name="E2_46a" type="IntPoz15SType"/>
+				<xs:attribute name="E2_46a" type=""/>
 			</xs:restriction>
 		</xs:complexContent>
 	</xs:complexType>
@@ -264,22 +264,22 @@
 			<xs:restriction base="xs:anyType">
 				<xs:attribute name="E3_11" type="IntPoz6SType"/>
 				<xs:attribute name="E3_12" type="IntPoz5SType"/>
-				<xs:attribute name="E3_13" type="IntPoz15SType"/>
-				<xs:attribute name="E3_14" type="IntPoz15SType"/>
+				<xs:attribute name="E3_13" type=""/>
+				<xs:attribute name="E3_14" type=""/>
 				<xs:attribute name="E3_21" type="IntPoz6SType"/>
 				<xs:attribute name="E3_22" type="IntPoz5SType"/>
-				<xs:attribute name="E3_23" type="IntPoz15SType"/>
-				<xs:attribute name="E3_24" type="IntPoz15SType"/>
+				<xs:attribute name="E3_23" type=""/>
+				<xs:attribute name="E3_24" type=""/>
 				<xs:attribute name="E3_31" type="IntPoz6SType"/>
 				<xs:attribute name="E3_32" type="IntPoz5SType"/>
-				<xs:attribute name="E3_33" type="IntPoz15SType"/>
-				<xs:attribute name="E3_34" type="IntPoz15SType"/>
+				<xs:attribute name="E3_33" type=""/>
+				<xs:attribute name="E3_34" type=""/>
 				<xs:attribute name="E3_41" type="IntPoz6SType"/>
 				<xs:attribute name="E3_42" type="IntPoz5SType"/>
-				<xs:attribute name="E3_43" type="IntPoz15SType"/>
-				<xs:attribute name="E3_44" type="IntPoz15SType"/>
-				<xs:attribute name="E3_total" type="IntPoz15SType"/>
-				<xs:attribute name="E3_suma" type="IntPoz15SType"/>
+				<xs:attribute name="E3_43" type=""/>
+				<xs:attribute name="E3_44" type=""/>
+				<xs:attribute name="E3_total" type=""/>
+				<xs:attribute name="E3_suma" type=""/>
 			</xs:restriction>
 		</xs:complexContent>
 	</xs:complexType>
@@ -287,7 +287,7 @@
 		<xs:complexContent>
 			<xs:restriction base="xs:anyType">
 				<xs:attribute name="E4_aj_nr" type="IntPoz6SType" use="required"/>
-				<xs:attribute name="E4_aj_suma" type="IntPoz15SType" use="required"/>
+				<xs:attribute name="E4_aj_suma" type="" use="required"/>
 			</xs:restriction>
 		</xs:complexContent>
 	</xs:complexType>
@@ -300,10 +300,10 @@
 	<xs:complexType name="AngajatorF1Type">
 		<xs:complexContent>
 			<xs:restriction base="xs:anyType">
-				<xs:attribute name="F1_suma" type="IntPoz15SType"/>
-				<xs:attribute name="F1_suma_ded" type="IntPoz15SType"/>
-				<xs:attribute name="F1_suma_scut" type="IntPoz15SType"/>
-				<xs:attribute name="F1_deplata" type="IntPoz15SType"/>
+				<xs:attribute name="F1_suma" type=""/>
+				<xs:attribute name="F1_suma_ded" type=""/>
+				<xs:attribute name="F1_suma_scut" type=""/>
+				<xs:attribute name="F1_deplata" type=""/>
 			</xs:restriction>
 		</xs:complexContent>
 	</xs:complexType>
@@ -312,10 +312,10 @@
 			<xs:restriction base="xs:anyType">
 				<xs:attribute name="F2_cif" type="CuiSType" use="required"/>
 				<xs:attribute name="F2_id" type="IntPoz5SType" use="required"/>
-				<xs:attribute name="F2_suma" type="IntPoz15SType" use="required"/>
-				<xs:attribute name="F2_suma_ded" type="IntPoz15SType" use="required"/>
-				<xs:attribute name="F2_suma_scut" type="IntPoz15SType" use="required"/>
-				<xs:attribute name="F2_deplata" type="IntPoz15SType" use="required"/>
+				<xs:attribute name="F2_suma" type="" use="required"/>
+				<xs:attribute name="F2_suma_ded" type="" use="required"/>
+				<xs:attribute name="F2_suma_scut" type="" use="required"/>
+				<xs:attribute name="F2_deplata" type="" use="required"/>
 			</xs:restriction>
 		</xs:complexContent>
 	</xs:complexType>
@@ -360,9 +360,9 @@
 				<xs:attribute name="cisAsig" type="CnpSType"/>
 				<xs:attribute name="asigScu" type="IntInt1_8SType"/>
 				<xs:attribute name="asigExc" type="IntInt0_2SType"/>
-				<xs:attribute name="Timp_E3" type="IntPoz15SType" use="required"/>
+				<xs:attribute name="Timp_E3" type="" use="required"/>
 				<xs:attribute name="Tcota_E4" type="DblPoz4_2SType"/>
-				<xs:attribute name="Tsuma_E4" type="IntPoz15SType"/>
+				<xs:attribute name="Tsuma_E4" type=""/>
 				<xs:attribute name="plata_CAS" type="IntInt0_1SType"/>
 				<xs:attribute name="plata_CASS" type="IntInt0_1SType"/>
 				<xs:attribute name="plata_CAM" type="IntInt0_1SType"/>
@@ -442,50 +442,50 @@
 				<xs:attribute name="A_2" type="IntInt0_1SType" use="required"/>
 				<xs:attribute name="A_3" type="Str_contractTypeSType" use="required"/>
 				<xs:attribute name="A_4" type="IntInt6_8SType" use="required"/>
-				<xs:attribute name="A_5" type="IntPoz15SType"/>
+				<xs:attribute name="A_5" type=""/>
 				<xs:attribute name="A_6" type="IntPoz3SType"/>
 				<xs:attribute name="A_7" type="IntPoz3SType"/>
 				<xs:attribute name="A_8" type="IntPoz5SType"/>
-				<xs:attribute name="A_9" type="IntPoz15SType"/>
-				<xs:attribute name="A_11" type="IntPoz15SType" use="required"/>
-				<xs:attribute name="A_12" type="IntPoz15SType" use="required"/>
-				<xs:attribute name="A_13" type="IntPoz15SType" use="required"/>
-				<xs:attribute name="A_14" type="IntPoz15SType" use="required"/>
-				<xs:attribute name="A_sal1" type="IntPoz15SType" use="required"/>
-				<xs:attribute name="A_sal2" type="IntPoz15SType" use="required"/>
-				<xs:attribute name="A_11P" type="IntPoz15SType"/>
-				<xs:attribute name="A_12P" type="IntPoz15SType"/>
-				<xs:attribute name="A_13P" type="IntPoz15SType"/>
-				<xs:attribute name="A_14P" type="IntPoz15SType"/>
-				<xs:attribute name="A_12D" type="IntPoz15SType"/>
-				<xs:attribute name="A_14D" type="IntPoz15SType"/>
+				<xs:attribute name="A_9" type=""/>
+				<xs:attribute name="A_11" type="" use="required"/>
+				<xs:attribute name="A_12" type="" use="required"/>
+				<xs:attribute name="A_13" type="" use="required"/>
+				<xs:attribute name="A_14" type="" use="required"/>
+				<xs:attribute name="A_sal1" type="" use="required"/>
+				<xs:attribute name="A_sal2" type="" use="required"/>
+				<xs:attribute name="A_11P" type=""/>
+				<xs:attribute name="A_12P" type=""/>
+				<xs:attribute name="A_13P" type=""/>
+				<xs:attribute name="A_14P" type=""/>
+				<xs:attribute name="A_12D" type=""/>
+				<xs:attribute name="A_14D" type=""/>
 			</xs:restriction>
 		</xs:complexContent>
 	</xs:complexType>
 	<xs:complexType name="AsiguratA1Type">
 		<xs:complexContent>
 			<xs:restriction base="xs:anyType">
-				<xs:attribute name="A_11i" type="IntPoz15SType" use="required"/>
-				<xs:attribute name="A_12i" type="IntPoz15SType" use="required"/>
-				<xs:attribute name="A_13i" type="IntPoz15SType" use="required"/>
-				<xs:attribute name="A_14i" type="IntPoz15SType" use="required"/>
-				<xs:attribute name="A_11f" type="IntPoz15SType" use="required"/>
-				<xs:attribute name="A_12f" type="IntPoz15SType" use="required"/>
-				<xs:attribute name="A_13f" type="IntPoz15SType" use="required"/>
-				<xs:attribute name="A_14f" type="IntPoz15SType" use="required"/>
-				<xs:attribute name="A_5i" type="IntPoz15SType" use="required"/>
-				<xs:attribute name="A_5f" type="IntPoz15SType" use="required"/>
-				<xs:attribute name="A_81" type="IntPoz15SType"/>
-				<xs:attribute name="A_82" type="IntPoz15SType"/>
-				<xs:attribute name="SalBrut_A" type="IntPoz15SType" use="required"/>
-				<xs:attribute name="A_11iP" type="IntPoz15SType"/>
-				<xs:attribute name="A_12iP" type="IntPoz15SType"/>
-				<xs:attribute name="A_13iP" type="IntPoz15SType"/>
-				<xs:attribute name="A_14iP" type="IntPoz15SType"/>
-				<xs:attribute name="A_11fP" type="IntPoz15SType"/>
-				<xs:attribute name="A_12fP" type="IntPoz15SType"/>
-				<xs:attribute name="A_13fP" type="IntPoz15SType"/>
-				<xs:attribute name="A_14fP" type="IntPoz15SType"/>
+				<xs:attribute name="A_11i" type="" use="required"/>
+				<xs:attribute name="A_12i" type="" use="required"/>
+				<xs:attribute name="A_13i" type="" use="required"/>
+				<xs:attribute name="A_14i" type="" use="required"/>
+				<xs:attribute name="A_11f" type="" use="required"/>
+				<xs:attribute name="A_12f" type="" use="required"/>
+				<xs:attribute name="A_13f" type="" use="required"/>
+				<xs:attribute name="A_14f" type="" use="required"/>
+				<xs:attribute name="A_5i" type="" use="required"/>
+				<xs:attribute name="A_5f" type="" use="required"/>
+				<xs:attribute name="A_81" type=""/>
+				<xs:attribute name="A_82" type=""/>
+				<xs:attribute name="SalBrut_A" type="" use="required"/>
+				<xs:attribute name="A_11iP" type=""/>
+				<xs:attribute name="A_12iP" type=""/>
+				<xs:attribute name="A_13iP" type=""/>
+				<xs:attribute name="A_14iP" type=""/>
+				<xs:attribute name="A_11fP" type=""/>
+				<xs:attribute name="A_12fP" type=""/>
+				<xs:attribute name="A_13fP" type=""/>
+				<xs:attribute name="A_14fP" type=""/>
 			</xs:restriction>
 		</xs:complexContent>
 	</xs:complexType>
@@ -496,17 +496,17 @@
 				<xs:attribute name="B1_2" type="IntInt0_1SType" use="required"/>
 				<xs:attribute name="B1_3" type="Str_contractTypeSType" use="required"/>
 				<xs:attribute name="B1_4" type="IntInt6_8SType" use="required"/>
-				<xs:attribute name="B1_5" type="IntPoz15SType"/>
+				<xs:attribute name="B1_5" type=""/>
 				<xs:attribute name="B1_6" type="IntPoz3SType"/>
 				<xs:attribute name="B1_7" type="IntPoz3SType"/>
 				<xs:attribute name="B1_8" type="IntPoz3SType"/>
 				<xs:attribute name="B1_9" type="IntPoz2SType"/>
-				<xs:attribute name="B1_10" type="IntPoz15SType"/>
+				<xs:attribute name="B1_10" type=""/>
 				<xs:attribute name="B1_15" type="IntPoz2SType"/>
 				<xs:attribute name="B1_16" type="IntPoz2SType"/>
 				<xs:attribute name="B1_17" type="IntPoz2SType"/>
-				<xs:attribute name="B1_sal1" type="IntPoz15SType" use="required"/>
-				<xs:attribute name="B1_sal2" type="IntPoz15SType" use="required"/>
+				<xs:attribute name="B1_sal1" type="" use="required"/>
+				<xs:attribute name="B1_sal2" type="" use="required"/>
 			</xs:restriction>
 		</xs:complexContent>
 	</xs:complexType>
@@ -518,16 +518,16 @@
 				<xs:attribute name="B2_2" type="IntPoz2SType"/>
 				<xs:attribute name="B2_3" type="IntPoz2SType"/>
 				<xs:attribute name="B2_4" type="IntPoz2SType"/>
-				<xs:attribute name="B2_5" type="IntPoz15SType"/>
-				<xs:attribute name="B2_6" type="IntPoz15SType"/>
-				<xs:attribute name="B2_7" type="IntPoz15SType"/>
-				<xs:attribute name="B2_6i" type="IntPoz15SType"/>
-				<xs:attribute name="B2_7i" type="IntPoz15SType"/>
-				<xs:attribute name="B2_6f" type="IntPoz15SType"/>
-				<xs:attribute name="B2_7f" type="IntPoz15SType"/>
-				<xs:attribute name="B2_5P" type="IntPoz15SType"/>
-				<xs:attribute name="B2_6P" type="IntPoz15SType"/>
-				<xs:attribute name="B2_7P" type="IntPoz15SType"/>
+				<xs:attribute name="B2_5" type=""/>
+				<xs:attribute name="B2_6" type=""/>
+				<xs:attribute name="B2_7" type=""/>
+				<xs:attribute name="B2_6i" type=""/>
+				<xs:attribute name="B2_7i" type=""/>
+				<xs:attribute name="B2_6f" type=""/>
+				<xs:attribute name="B2_7f" type=""/>
+				<xs:attribute name="B2_5P" type=""/>
+				<xs:attribute name="B2_6P" type=""/>
+				<xs:attribute name="B2_7P" type=""/>
 			</xs:restriction>
 		</xs:complexContent>
 	</xs:complexType>
@@ -540,13 +540,13 @@
 				<xs:attribute name="B3_4" type="IntPoz2SType"/>
 				<xs:attribute name="B3_5" type="IntPoz2SType"/>
 				<xs:attribute name="B3_6" type="IntPoz2SType"/>
-				<xs:attribute name="B3_7" type="IntPoz15SType"/>
+				<xs:attribute name="B3_7" type=""/>
 				<xs:attribute name="B3_8" type="IntPoz2SType"/>
-				<xs:attribute name="B3_9" type="IntPoz15SType"/>
-				<xs:attribute name="B3_10" type="IntPoz15SType"/>
-				<xs:attribute name="B3_11" type="IntPoz15SType"/>
-				<xs:attribute name="B3_12" type="IntPoz15SType"/>
-				<xs:attribute name="B3_13" type="IntPoz15SType"/>
+				<xs:attribute name="B3_9" type=""/>
+				<xs:attribute name="B3_10" type=""/>
+				<xs:attribute name="B3_11" type=""/>
+				<xs:attribute name="B3_12" type=""/>
+				<xs:attribute name="B3_13" type=""/>
 			</xs:restriction>
 		</xs:complexContent>
 	</xs:complexType>
@@ -555,59 +555,59 @@
 			<xs:restriction base="xs:anyType">
 				<xs:attribute name="B4_1" type="IntPoz2SType"/>
 				<xs:attribute name="B4_2" type="IntPoz2SType"/>
-				<xs:attribute name="B4_3" type="IntPoz15SType"/>
-				<xs:attribute name="B4_5" type="IntPoz15SType"/>
-				<xs:attribute name="B4_6" type="IntPoz15SType"/>
-				<xs:attribute name="B4_7" type="IntPoz15SType"/>
-				<xs:attribute name="B4_8" type="IntPoz15SType"/>
-				<xs:attribute name="B4_14" type="IntPoz15SType"/>
-				<xs:attribute name="B4_17" type="IntPoz15SType"/>
-				<xs:attribute name="B4_18" type="IntPoz15SType"/>
-				<xs:attribute name="B4_19" type="IntPoz15SType"/>
-				<xs:attribute name="B4_20" type="IntPoz15SType"/>
-				<xs:attribute name="B4_21" type="IntPoz15SType"/>
-				<xs:attribute name="B4_22" type="IntPoz15SType"/>
-				<xs:attribute name="B4_23" type="IntPoz15SType"/>
-				<xs:attribute name="B4_24" type="IntPoz15SType"/>
-				<xs:attribute name="B4_25" type="IntPoz15SType"/>
-				<xs:attribute name="B4_26" type="IntPoz15SType"/>
-				<xs:attribute name="B4_27" type="IntPoz15SType"/>
-				<xs:attribute name="B4_28" type="IntPoz15SType"/>
-				<xs:attribute name="B4_29" type="IntPoz15SType"/>
-				<xs:attribute name="B4_30" type="IntPoz15SType"/>
-				<xs:attribute name="B4_5P" type="IntPoz15SType"/>
-				<xs:attribute name="B4_6P" type="IntPoz15SType"/>
-				<xs:attribute name="B4_7P" type="IntPoz15SType"/>
-				<xs:attribute name="B4_8P" type="IntPoz15SType"/>
-				<xs:attribute name="B4_6D" type="IntPoz15SType"/>
-				<xs:attribute name="B4_8D" type="IntPoz15SType"/>
+				<xs:attribute name="B4_3" type=""/>
+				<xs:attribute name="B4_5" type=""/>
+				<xs:attribute name="B4_6" type=""/>
+				<xs:attribute name="B4_7" type=""/>
+				<xs:attribute name="B4_8" type=""/>
+				<xs:attribute name="B4_14" type=""/>
+				<xs:attribute name="B4_17" type=""/>
+				<xs:attribute name="B4_18" type=""/>
+				<xs:attribute name="B4_19" type=""/>
+				<xs:attribute name="B4_20" type=""/>
+				<xs:attribute name="B4_21" type=""/>
+				<xs:attribute name="B4_22" type=""/>
+				<xs:attribute name="B4_23" type=""/>
+				<xs:attribute name="B4_24" type=""/>
+				<xs:attribute name="B4_25" type=""/>
+				<xs:attribute name="B4_26" type=""/>
+				<xs:attribute name="B4_27" type=""/>
+				<xs:attribute name="B4_28" type=""/>
+				<xs:attribute name="B4_29" type=""/>
+				<xs:attribute name="B4_30" type=""/>
+				<xs:attribute name="B4_5P" type=""/>
+				<xs:attribute name="B4_6P" type=""/>
+				<xs:attribute name="B4_7P" type=""/>
+				<xs:attribute name="B4_8P" type=""/>
+				<xs:attribute name="B4_6D" type=""/>
+				<xs:attribute name="B4_8D" type=""/>
 			</xs:restriction>
 		</xs:complexContent>
 	</xs:complexType>
 	<xs:complexType name="AsiguratB41Type">
 		<xs:complexContent>
 			<xs:restriction base="xs:anyType">
-				<xs:attribute name="B4_5i" type="IntPoz15SType" use="required"/>
-				<xs:attribute name="B4_6i" type="IntPoz15SType" use="required"/>
-				<xs:attribute name="B4_7i" type="IntPoz15SType" use="required"/>
-				<xs:attribute name="B4_8i" type="IntPoz15SType" use="required"/>
-				<xs:attribute name="B4_14i" type="IntPoz15SType" use="required"/>
-				<xs:attribute name="B4_5f" type="IntPoz15SType" use="required"/>
-				<xs:attribute name="B4_6f" type="IntPoz15SType" use="required"/>
-				<xs:attribute name="B4_7f" type="IntPoz15SType" use="required"/>
-				<xs:attribute name="B4_8f" type="IntPoz15SType" use="required"/>
-				<xs:attribute name="B4_14f" type="IntPoz15SType" use="required"/>
-				<xs:attribute name="B4_81" type="IntPoz15SType"/>
-				<xs:attribute name="B4_82" type="IntPoz15SType"/>
-				<xs:attribute name="SalBrut_B" type="IntPoz15SType" use="required"/>
-				<xs:attribute name="B4_5iP" type="IntPoz15SType"/>
-				<xs:attribute name="B4_6iP" type="IntPoz15SType"/>
-				<xs:attribute name="B4_7iP" type="IntPoz15SType"/>
-				<xs:attribute name="B4_8iP" type="IntPoz15SType"/>
-				<xs:attribute name="B4_5fP" type="IntPoz15SType"/>
-				<xs:attribute name="B4_6fP" type="IntPoz15SType"/>
-				<xs:attribute name="B4_7fP" type="IntPoz15SType"/>
-				<xs:attribute name="B4_8fP" type="IntPoz15SType"/>
+				<xs:attribute name="B4_5i" type="" use="required"/>
+				<xs:attribute name="B4_6i" type="" use="required"/>
+				<xs:attribute name="B4_7i" type="" use="required"/>
+				<xs:attribute name="B4_8i" type="" use="required"/>
+				<xs:attribute name="B4_14i" type="" use="required"/>
+				<xs:attribute name="B4_5f" type="" use="required"/>
+				<xs:attribute name="B4_6f" type="" use="required"/>
+				<xs:attribute name="B4_7f" type="" use="required"/>
+				<xs:attribute name="B4_8f" type="" use="required"/>
+				<xs:attribute name="B4_14f" type="" use="required"/>
+				<xs:attribute name="B4_81" type=""/>
+				<xs:attribute name="B4_82" type=""/>
+				<xs:attribute name="SalBrut_B" type="" use="required"/>
+				<xs:attribute name="B4_5iP" type=""/>
+				<xs:attribute name="B4_6iP" type=""/>
+				<xs:attribute name="B4_7iP" type=""/>
+				<xs:attribute name="B4_8iP" type=""/>
+				<xs:attribute name="B4_5fP" type=""/>
+				<xs:attribute name="B4_6fP" type=""/>
+				<xs:attribute name="B4_7fP" type=""/>
+				<xs:attribute name="B4_8fP" type=""/>
 			</xs:restriction>
 		</xs:complexContent>
 	</xs:complexType>
@@ -617,22 +617,22 @@
 				<xs:attribute name="C_1" type="Int_asigTypeCSType" use="required"/>
 				<xs:attribute name="C_2" type="IntPoz2SType"/>
 				<xs:attribute name="C_3" type="IntPoz2SType"/>
-				<xs:attribute name="C_4" type="IntPoz15SType"/>
+				<xs:attribute name="C_4" type=""/>
 				<xs:attribute name="C_5" type="IntPoz2SType"/>
-				<xs:attribute name="C_8" type="IntPoz15SType"/>
-				<xs:attribute name="C_9" type="IntPoz15SType"/>
-				<xs:attribute name="C_10" type="IntPoz15SType"/>
-				<xs:attribute name="C_11" type="IntPoz15SType"/>
+				<xs:attribute name="C_8" type=""/>
+				<xs:attribute name="C_9" type=""/>
+				<xs:attribute name="C_10" type=""/>
+				<xs:attribute name="C_11" type=""/>
 				<xs:attribute name="C_17" type="IntPoz2SType"/>
-				<xs:attribute name="C_18" type="IntPoz15SType"/>
-				<xs:attribute name="C_19" type="IntPoz15SType"/>
+				<xs:attribute name="C_18" type=""/>
+				<xs:attribute name="C_19" type=""/>
 				<xs:attribute name="C_20" type="IntPoz2SType"/>
-				<xs:attribute name="C_21" type="IntPoz15SType"/>
-				<xs:attribute name="C_22" type="IntPoz15SType"/>
-				<xs:attribute name="C_23" type="IntPoz15SType"/>
-				<xs:attribute name="C_24" type="IntPoz15SType"/>
-				<xs:attribute name="C_25" type="IntPoz15SType"/>
-				<xs:attribute name="C_26" type="IntPoz15SType"/>
+				<xs:attribute name="C_21" type=""/>
+				<xs:attribute name="C_22" type=""/>
+				<xs:attribute name="C_23" type=""/>
+				<xs:attribute name="C_24" type=""/>
+				<xs:attribute name="C_25" type=""/>
+				<xs:attribute name="C_26" type=""/>
 			</xs:restriction>
 		</xs:complexContent>
 	</xs:complexType>
@@ -658,8 +658,8 @@
 				<xs:attribute name="D_17" type="IntPoz6SType" use="required"/>
 				<xs:attribute name="D_18" type="IntPoz3SType" use="required"/>
 				<xs:attribute name="D_19" type="DblPoz6_2SType" use="required"/>
-				<xs:attribute name="D_20" type="IntPoz15SType" use="required"/>
-				<xs:attribute name="D_21" type="IntPoz15SType" use="required"/>
+				<xs:attribute name="D_20" type="" use="required"/>
+				<xs:attribute name="D_21" type="" use="required"/>
 				<xs:attribute name="D_23" type="Str3" use="required"/>
 				<xs:attribute name="Data_CMI" type="DateSType"/>
 				<xs:attribute name="D_8a" type="CnpSType"/>
@@ -669,23 +669,23 @@
 	<xs:complexType name="AsiguratE1Type">
 		<xs:complexContent>
 			<xs:restriction base="xs:anyType">
-				<xs:attribute name="E1_1" type="IntPoz15SType" use="required"/>
-				<xs:attribute name="E1_2" type="IntPoz15SType" use="required"/>
-				<xs:attribute name="E1_3" type="IntPoz15SType" use="required"/>
-				<xs:attribute name="E1_4" type="IntPoz15SType" use="required"/>
-				<xs:attribute name="E1_5" type="IntPoz15SType" use="required"/>
-				<xs:attribute name="E1_6" type="IntPoz15SType" use="required"/>
-				<xs:attribute name="E1_7" type="IntPoz15SType" use="required"/>
+				<xs:attribute name="E1_1" type="" use="required"/>
+				<xs:attribute name="E1_2" type="" use="required"/>
+				<xs:attribute name="E1_3" type="" use="required"/>
+				<xs:attribute name="E1_4" type="" use="required"/>
+				<xs:attribute name="E1_5" type="" use="required"/>
+				<xs:attribute name="E1_6" type="" use="required"/>
+				<xs:attribute name="E1_7" type="" use="required"/>
 			</xs:restriction>
 		</xs:complexContent>
 	</xs:complexType>
 	<xs:complexType name="AsiguratE2Type">
 		<xs:complexContent>
 			<xs:restriction base="xs:anyType">
-				<xs:attribute name="E2_1" type="IntPoz15SType" use="required"/>
-				<xs:attribute name="E2_2" type="IntPoz15SType" use="required"/>
-				<xs:attribute name="E2_3" type="IntPoz15SType" use="required"/>
-				<xs:attribute name="E2_4" type="IntPoz15SType" use="required"/>
+				<xs:attribute name="E2_1" type="" use="required"/>
+				<xs:attribute name="E2_2" type="" use="required"/>
+				<xs:attribute name="E2_3" type="" use="required"/>
+				<xs:attribute name="E2_4" type="" use="required"/>
 			</xs:restriction>
 		</xs:complexContent>
 	</xs:complexType>
@@ -699,73 +699,73 @@
 				<xs:attribute name="E3_5" type="Str7"/>
 				<xs:attribute name="E3_6" type="Str7"/>
 				<xs:attribute name="E3_7" type="Str_N1"/>
-				<xs:attribute name="E3_8" type="IntPoz15SType" use="required"/>
-				<xs:attribute name="E3_9" type="IntPoz15SType" use="required"/>
-				<xs:attribute name="E3_10" type="IntPoz15SType"/>
-				<xs:attribute name="E3_11" type="IntPoz15SType"/>
+				<xs:attribute name="E3_8" type="" use="required"/>
+				<xs:attribute name="E3_9" type="" use="required"/>
+				<xs:attribute name="E3_10" type=""/>
+				<xs:attribute name="E3_11" type=""/>
 				<xs:attribute name="E3_12" type="IntPoz4SType"/>
-				<xs:attribute name="E3_13" type="IntPoz15SType"/>
-				<xs:attribute name="E3_14" type="IntPoz15SType" use="required"/>
-				<xs:attribute name="E3_15" type="IntPoz15SType" use="required"/>
-				<xs:attribute name="E3_16" type="IntPoz15SType" use="required"/>
-				<xs:attribute name="E3_18" type="IntPoz15SType"/>
-				<xs:attribute name="E3_19" type="IntPoz15SType" use="required"/>
-				<xs:attribute name="E3_20" type="IntPoz15SType"/>
-				<xs:attribute name="E3_21" type="IntPoz15SType" use="required"/>
-				<xs:attribute name="E3_22" type="IntPoz15SType"/>
-				<xs:attribute name="E3_23" type="IntPoz15SType"/>
-				<xs:attribute name="E3_33" type="IntPoz15SType"/>
-				<xs:attribute name="E3_34" type="IntPoz15SType"/>
-				<xs:attribute name="E3_35" type="IntPoz15SType"/>
-				<xs:attribute name="E3_36" type="IntPoz15SType"/>
-				<xs:attribute name="E3_31" type="IntPoz15SType"/>
-				<xs:attribute name="E3_32" type="IntPoz15SType"/>
-				<xs:attribute name="E3_24" type="IntPoz15SType"/>
-				<xs:attribute name="E3_25" type="IntPoz15SType"/>
-				<xs:attribute name="E3_26" type="IntPoz15SType"/>
-				<xs:attribute name="E3_27" type="IntPoz15SType"/>
-				<xs:attribute name="E3_28" type="IntPoz15SType"/>
-				<xs:attribute name="E3_29" type="IntPoz15SType"/>
-				<xs:attribute name="E3_30" type="IntPoz15SType"/>
+				<xs:attribute name="E3_13" type=""/>
+				<xs:attribute name="E3_14" type="" use="required"/>
+				<xs:attribute name="E3_15" type="" use="required"/>
+				<xs:attribute name="E3_16" type="" use="required"/>
+				<xs:attribute name="E3_18" type=""/>
+				<xs:attribute name="E3_19" type="" use="required"/>
+				<xs:attribute name="E3_20" type=""/>
+				<xs:attribute name="E3_21" type="" use="required"/>
+				<xs:attribute name="E3_22" type=""/>
+				<xs:attribute name="E3_23" type=""/>
+				<xs:attribute name="E3_33" type=""/>
+				<xs:attribute name="E3_34" type=""/>
+				<xs:attribute name="E3_35" type=""/>
+				<xs:attribute name="E3_36" type=""/>
+				<xs:attribute name="E3_31" type=""/>
+				<xs:attribute name="E3_32" type=""/>
+				<xs:attribute name="E3_24" type=""/>
+				<xs:attribute name="E3_25" type=""/>
+				<xs:attribute name="E3_26" type=""/>
+				<xs:attribute name="E3_27" type=""/>
+				<xs:attribute name="E3_28" type=""/>
+				<xs:attribute name="E3_29" type=""/>
+				<xs:attribute name="E3_30" type=""/>
 				<xs:attribute name="E3_37" type="Str7"/>
-				<xs:attribute name="E3_38" type="IntPoz15SType"/>
-				<xs:attribute name="E3_39" type="IntPoz15SType"/>
-				<xs:attribute name="E3_40" type="IntPoz15SType"/>
-				<xs:attribute name="E3_41" type="IntPoz15SType"/>
-				<xs:attribute name="E3_42" type="IntPoz15SType"/>
-				<xs:attribute name="E3_43" type="IntPoz15SType"/>
-				<xs:attribute name="E3_44" type="IntPoz15SType"/>
-				<xs:attribute name="E3_45" type="IntPoz15SType"/>
-				<xs:attribute name="E3_46" type="IntPoz15SType"/>
-				<xs:attribute name="E3_47" type="IntPoz15SType"/>
-				<xs:attribute name="E3_48" type="IntPoz15SType"/>
-				<xs:attribute name="E3_49" type="IntPoz15SType"/>
-				<xs:attribute name="E3_50" type="IntPoz15SType"/>
-				<xs:attribute name="E3_51" type="IntPoz15SType"/>
-				<xs:attribute name="E3_52" type="IntPoz15SType"/>
-				<xs:attribute name="E3_53" type="IntPoz15SType"/>
-				<xs:attribute name="E3_54" type="IntPoz15SType"/>
-				<xs:attribute name="E3_55" type="IntPoz15SType"/>
-				<xs:attribute name="E3_56" type="IntPoz15SType"/>
-				<xs:attribute name="E3_57" type="IntPoz15SType"/>
-				<xs:attribute name="E3_58" type="IntPoz15SType"/>
-				<xs:attribute name="E3_59" type="IntPoz15SType"/>
-				<xs:attribute name="E3_60" type="IntPoz15SType"/>
-				<xs:attribute name="E3_61" type="IntPoz15SType"/>
-				<xs:attribute name="E3_62" type="IntPoz15SType"/>
-				<xs:attribute name="E3_63" type="IntPoz15SType"/>
-				<xs:attribute name="E3_64" type="IntPoz15SType"/>
-				<xs:attribute name="E3_65" type="IntPoz15SType"/>
-				<xs:attribute name="E3_66" type="IntPoz15SType"/>
-				<xs:attribute name="E3_67" type="IntPoz15SType"/>
-				<xs:attribute name="E3_68" type="IntPoz15SType"/>
-				<xs:attribute name="E3_69" type="IntPoz15SType"/>
-				<xs:attribute name="E3_70" type="IntPoz15SType"/>
-				<xs:attribute name="E3_71" type="IntPoz15SType"/>
-				<xs:attribute name="E3_72" type="IntPoz15SType"/>
-				<xs:attribute name="E3_73" type="IntPoz15SType"/>
-				<xs:attribute name="E3_74" type="IntPoz15SType"/>
-				<xs:attribute name="E3_75" type="IntPoz15SType"/>
+				<xs:attribute name="E3_38" type=""/>
+				<xs:attribute name="E3_39" type=""/>
+				<xs:attribute name="E3_40" type=""/>
+				<xs:attribute name="E3_41" type=""/>
+				<xs:attribute name="E3_42" type=""/>
+				<xs:attribute name="E3_43" type=""/>
+				<xs:attribute name="E3_44" type=""/>
+				<xs:attribute name="E3_45" type=""/>
+				<xs:attribute name="E3_46" type=""/>
+				<xs:attribute name="E3_47" type=""/>
+				<xs:attribute name="E3_48" type=""/>
+				<xs:attribute name="E3_49" type=""/>
+				<xs:attribute name="E3_50" type=""/>
+				<xs:attribute name="E3_51" type=""/>
+				<xs:attribute name="E3_52" type=""/>
+				<xs:attribute name="E3_53" type=""/>
+				<xs:attribute name="E3_54" type=""/>
+				<xs:attribute name="E3_55" type=""/>
+				<xs:attribute name="E3_56" type=""/>
+				<xs:attribute name="E3_57" type=""/>
+				<xs:attribute name="E3_58" type=""/>
+				<xs:attribute name="E3_59" type=""/>
+				<xs:attribute name="E3_60" type=""/>
+				<xs:attribute name="E3_61" type=""/>
+				<xs:attribute name="E3_62" type=""/>
+				<xs:attribute name="E3_63" type=""/>
+				<xs:attribute name="E3_64" type=""/>
+				<xs:attribute name="E3_65" type=""/>
+				<xs:attribute name="E3_66" type=""/>
+				<xs:attribute name="E3_67" type=""/>
+				<xs:attribute name="E3_68" type=""/>
+				<xs:attribute name="E3_69" type=""/>
+				<xs:attribute name="E3_70" type=""/>
+				<xs:attribute name="E3_71" type=""/>
+				<xs:attribute name="E3_72" type=""/>
+				<xs:attribute name="E3_73" type=""/>
+				<xs:attribute name="E3_74" type=""/>
+				<xs:attribute name="E3_75" type=""/>
 			</xs:restriction>
 		</xs:complexContent>
 	</xs:complexType>
@@ -777,9 +777,9 @@
 				<xs:attribute name="cui" type="CifSType"/>
 				<xs:attribute name="den" type="Str50"/>
 				<xs:attribute name="cota" type="IntInt1_2SType" use="required"/>
-				<xs:attribute name="suma" type="IntPoz15SType" use="required"/>
+				<xs:attribute name="suma" type="" use="required"/>
 				<xs:attribute name="cota_ctr" type="DblPoz4_2SType"/>
-				<xs:attribute name="suma_ctr" type="IntPoz15SType"/>
+				<xs:attribute name="suma_ctr" type=""/>
 				<xs:attribute name="cnp_ctr" type="CnpSType"/>
 			</xs:restriction>
 		</xs:complexContent>
@@ -1605,7 +1605,7 @@
 			<xs:pattern value="\d{0,1}(\.\d{0,3})?"/>
 		</xs:restriction>
 	</xs:simpleType>
-	<xs:simpleType name="IntPoz15SType">
+	<xs:simpleType name="">
 		<xs:restriction base="xs:integer">
 			<xs:minInclusive value="0"/>
 			<xs:maxInclusive value="999999999999999"/>
