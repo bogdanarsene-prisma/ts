@@ -10,7 +10,7 @@ export function itemsAreEqual(
   ignoredFields: string[] = [],
 ): boolean {
   if (!isObject(item1)) {
-    return item1 === item2;
+    return item1 == item2;
   }
   if (item1 instanceof Date) {
     return item1.getTime() === item2.getTime();
