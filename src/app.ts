@@ -5,28 +5,28 @@ function isObject(item: any): boolean {
 }
 
 export function itemsAreEqual(
-  obj1: any,
-  obj2: any,
+  item1: any,
+  item2: any,
   ignoredFields: string[] = [],
 ): boolean {
-  if (!isObject(obj1)) {
-    return obj1 === obj2;
+  if (!isObject(item1)) {
+    return item1 === item2;
   }
-  if (obj1 instanceof Date) {
-    return obj1.getTime() === obj2.getTime();
+  if (item1 instanceof Date) {
+    return item1.getTime() === item2.getTime();
   }
-  for (const [key, value] of Object.entries(obj1)) {
+  for (const [key, value] of Object.entries(item1)) {
     if (ignoredFields.includes(key)) continue;
-    if (!obj2.hasOwnProperty(key)) {
+    if (!item2.hasOwnProperty(key)) {
       return false;
     }
-    if (!itemsAreEqual(value, obj2[key])) {
+    if (!itemsAreEqual(value, item2[key])) {
       return false;
     }
   }
-  for (const [key, value] of Object.entries(obj2)) {
+  for (const [key, value] of Object.entries(item2)) {
     if (ignoredFields.includes(key)) continue;
-    if (!obj1.hasOwnProperty(key)) {
+    if (!item1.hasOwnProperty(key)) {
       return false;
     }
   }
